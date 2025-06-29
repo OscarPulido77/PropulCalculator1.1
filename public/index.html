@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Materiales Tablayeso</title>
+    <meta name="description" content="Calculadora online para estimar materiales de Tablayeso (Drywall) y Durock.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.14/jspdf.plugin.autotable.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Materiales PROPULGT</h1>
+
+        <div class="input-group">
+            <label for="work-area">AREA DE TRABAJO:</label>
+            <input type="text" id="work-area" class="work-area-input" placeholder="Ej: Proyecto Casa Blanca">
+        </div>
+
+        <div class="input-section">
+            <h2>Ingresa Muros, Cielos o Cenefas</h2>
+            <div id="items-container">
+                </div>
+
+            <button id="add-item-btn">Agregar Muro, Cielo o Cenefa</button>
+
+            <button id="calculate-btn">Calcular Materiales Totales</button>
+        </div>
+
+        <div class="results-section" id="results-section">
+            <h2>Resumen de Materiales Totales</h2>
+            <div id="results-content">
+                <p>Agrega dimensiones y haz clic en "Calcular Materiales Totales".</p>
+            </div>
+            
+            <div class="download-options hidden">
+                <button id="generate-pdf-btn">Generar PDF del Resumen</button>
+                <button id="generate-excel-btn">Generar Excel del Resumen</button>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 PROPUL. Todos los derechos reservados.</p>
+            <p>Calculadora de Materiales v2.0</p>
+        </footer>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
